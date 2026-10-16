@@ -4,29 +4,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nikhil Shinde — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <div class="bg-glow" aria-hidden="true"></div>
+
   <header class="nav">
     <a href="#" class="logo">Nikhil<span>.</span></a>
-    <nav>
+    <nav class="nav-links">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
+    <a href="#contact" class="btn btn-primary nav-cta">Hire Me</a>
   </header>
 
   <section class="hero">
-    <p class="hero-greeting">Hi, I'm</p>
-    <h1>Nikhil Shinde</h1>
-    <p class="hero-sub">I build clean, modern web experiences that are fast, accessible, and a joy to use.</p>
+    <p class="hero-greeting">👋 Hi, I'm</p>
+    <h1>Nikhil <span class="gradient">Shinde</span></h1>
+    <p class="hero-sub">I build <span id="typed" class="typed"></span><span class="cursor">|</span></p>
+    <p class="hero-desc">Clean, modern web experiences that are fast, accessible, and a joy to use.</p>
     <div class="hero-actions">
       <a href="#projects" class="btn btn-primary">View My Work</a>
       <a href="#contact" class="btn btn-ghost">Get In Touch</a>
     </div>
+    <div class="hero-stats">
+      <div class="stat"><strong>3+</strong><span>Projects Built</span></div>
+      <div class="stat"><strong>5+</strong><span>Technologies</span></div>
+      <div class="stat"><strong>100%</strong><span>Passion</span></div>
+    </div>
   </section>
 
-  <section id="about" class="section">
+  <section id="about" class="section reveal">
     <h2>About Me</h2>
     <p>
       I'm a developer who loves turning ideas into polished digital products. I care about
@@ -41,34 +53,48 @@
       <span>JavaScript</span>
       <span>React</span>
       <span>Node.js</span>
+      <span>Git</span>
     </div>
   </section>
 
-  <section id="projects" class="section">
+  <section id="projects" class="section reveal">
     <h2>Projects</h2>
+    <p class="section-sub">A few things I've built recently.</p>
     <div class="projects-grid">
       <article class="project-card">
+        <div class="project-icon">🗂️</div>
         <h3>TaskFlow</h3>
         <p>A minimal task manager with drag-and-drop boards and smart reminders.</p>
-        <span class="tag">React</span>
-        <span class="tag">Firebase</span>
+        <div class="tags">
+          <span class="tag">React</span>
+          <span class="tag">Firebase</span>
+        </div>
+        <a href="#" class="project-link">View Project →</a>
       </article>
       <article class="project-card">
+        <div class="project-icon">🌤️</div>
         <h3>Weatherly</h3>
         <p>A live weather app with 5-day forecasts, saved cities, and a clean UI.</p>
-        <span class="tag">JavaScript</span>
-        <span class="tag">API</span>
+        <div class="tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">API</span>
+        </div>
+        <a href="#" class="project-link">View Project →</a>
       </article>
       <article class="project-card">
+        <div class="project-icon">📝</div>
         <h3>DevNotes</h3>
         <p>A markdown note-taking app with search, tags, and offline support.</p>
-        <span class="tag">Node.js</span>
-        <span class="tag">MongoDB</span>
+        <div class="tags">
+          <span class="tag">Node.js</span>
+          <span class="tag">MongoDB</span>
+        </div>
+        <a href="#" class="project-link">View Project →</a>
       </article>
     </div>
   </section>
 
-  <section id="contact" class="section">
+  <section id="contact" class="section reveal">
     <h2>Contact</h2>
     <p class="contact-intro">Have a project in mind or just want to say hi? Drop me a message.</p>
     <form id="contact-form" class="contact-form">
@@ -89,7 +115,6 @@
     </form>
   </section>
 
-  <!-- Footer: copyright and credits -->
   <footer class="footer">
     <p>© 2026 Nikhil Shinde. Built with care.</p>
     <p>Thanks for visiting my portfolio!</p>
